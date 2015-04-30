@@ -5,10 +5,13 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using OnlineShop.Filters;
 using OnlineShop.Models;
 
 namespace OnlineShop.Controllers
 {
+    [Authorize]
+    [InitializeSimpleMembership]
     public class ProductsController : Controller
     {
         private ProductDBContext db = new ProductDBContext();
